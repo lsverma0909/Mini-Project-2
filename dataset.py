@@ -179,7 +179,7 @@ class ARDSDataset(Dataset):
 
     def __getitem__(self, index):
         seq = self.all_sequences[index]
-        pt, data, target = seq
+        pt, data, target, _ = seq
         try:
             mu, std = self.scaling_factors[None]
         except AttributeError:
